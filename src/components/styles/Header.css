@@ -1,0 +1,20 @@
+.header-container{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content:center;
+	gap: 20px;
+	padding:30px 0 30px 50px;
+	height: 60px;
+	background-color: #2f3045;
+	color: white;
+	position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header-avatar{
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+}

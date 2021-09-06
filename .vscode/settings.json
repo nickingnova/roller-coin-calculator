@@ -1,0 +1,15 @@
+{
+	"extensions.supportVirtualWorkspaces": {
+
+		"pub.name": false
+	},
+	"emmet.excludeLanguages": [
+	
+		"markdown"
+	]
+	[
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+	]

@@ -1,0 +1,17 @@
+.global-container{
+	background:#181928;
+	padding:2rem 3rem 2rem 3rem;
+	margin: 0;
+	color: white;
+	height: 100%;
+	display: flex;
+	gap: 50px;
+}
+.mid{
+	width: 50%;
+	height: auto;
+}
+h1{
+	letter-spacing: 0.2em;
+	font-weight: 200;
+}

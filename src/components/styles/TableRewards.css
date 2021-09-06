@@ -1,0 +1,22 @@
+.table-container{
+	font-size: 24px;
+	margin-left: 20px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.col-container{
+	width: 100%;
+}
+.col{
+	width: 100%;
+	justify-content:space-between;
+	color: #03e1e4;
+}
+.info{
+	width:100%;
+	text-align: center;
+	color: #03e0e48a;
+}
+.row>td>h4{
+	color: #d735bcd3;
+}

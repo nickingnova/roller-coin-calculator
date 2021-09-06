@@ -1,0 +1,85 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
+.form{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	background-image: linear-gradient(0deg,#514e72,#2f3045);
+	border-radius: 10px;
+	padding: 10px;
+}
+.form-subTitle{
+	color: #03e1e4;
+}
+
+.label{
+	font-size: 24px;
+	font-weight: 500;
+}
+.right{
+	margin:0 28px 0 20px;
+}
+.form-title{
+	text-align:center;
+	margin-bottom: 20px;
+}
+.selector{
+	font-size:24px;
+	font-weight: 400;
+	line-height: 1.3;
+	margin: 0 0.3em;
+	padding: 0.3em 0.5em 0.3em .3em;
+	background:none;
+	color: #fff;
+	border-radius: 5px;
+}
+option{
+	color: black;
+	background:none;
+}
+.form-group{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0.2em 0;
+}
+.form-control{
+	font-size: 24px;
+	text-align: end;
+	width: 200px;
+	border: 3px solid #03e0e48a;
+	color: #fff;
+	border-radius: 5px;
+	background-color: transparent;
+	padding-right: 15px;
+}
+.form-control:focus-visible{
+	border: 3px solid #03e1e4;
+	outline: none;
+}
+.btn{
+	margin: .3em 0;
+	font-size: 22px;
+	align-self: center;
+	width: 30%;
+	height: auto;
+	background-color:#03e1e4;
+	border-radius: 5px;
+	box-shadow: 0 6px #186c6d, 0 10px #1f1f2c;
+	border: 1px solid #9ff2f3;
+	color: #2f3045;
+	padding: 8px 20px;
+	transition: box-shadow .1s ease-in-out;
+}
+.btn:active{
+	position: relative;
+	top: 5px;
+	box-shadow: none;
+}

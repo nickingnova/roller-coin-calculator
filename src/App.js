@@ -9,9 +9,9 @@ function App(){
 	return(
 		<BrowserRouter>
 			<Layout>
-				<Switch>
-					<Route exact path="/" component={Home} />
-				</Switch>
+			<Switch>
+				<Route path="/roller-coin-calculator" component={Home} />
+			</Switch>
 			</Layout>
 		</BrowserRouter>
 	)

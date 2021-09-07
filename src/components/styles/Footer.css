@@ -1,33 +1,44 @@
 .footer-container{
 	position: sticky;
 	bottom: 0;
-	display: flex;
-	flex-direction: row;
+	display: grid;
 	justify-content: space-between;
-	height: 90px;
-	padding:0 50px;
+	height: 100px;
+	padding:10px;
 	align-items: center;
-	gap: 20px;
+	gap: 10px;
 	background-color: #2f3045;
 	color: white;
   z-index: 999;
 	margin: 0;
+	grid-template-areas:"logo promo"
+											"social social";
+}
+
+@media (min-width: 988px) {
+  .footer-container {
+		padding:0 30px;
+		grid-template-areas:"logo social promo";
+		gap: 20px;
+		height: 80px;
+  }
 }
 
 .social-container{
+	grid-area: social;
 	display: flex;
 	flex-direction: row;
 	gap: 25px;
 	list-style: none;
-}
-
+	justify-content: center;
+}	
 .icons-container{
 	cursor: pointer;
 }
 
 .icons{
 	color: white;
-	font-size: 24px;
+	font-size: 1.5em;
 	text-decoration-line:none;
 }
 .icons-container:hover{
@@ -35,9 +46,9 @@
 }
 
 .promo-container{
+	grid-area: promo;
 	display: inline-block;
-	width: 460px;
-	height: 60px;
+	width: auto;
 }
 
 .promo-container>img{
@@ -46,6 +57,7 @@
 }
 
 .footer-tittle{
+	grid-area: logo;
 	display: flex;
 	flex-direction: row;
 	align-items: center;

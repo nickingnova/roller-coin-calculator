@@ -1,8 +1,5 @@
 .table-container{
 	font-size: 24px;
-	margin-left: 20px;
-	width: 100%;
-	margin-bottom: 20px;
 }
 .col-container{
 	width: 100%;
@@ -12,6 +9,10 @@
 	justify-content:space-between;
 	color: #03e1e4;
 }
+.table-tittles{
+	font-size: 1.7rem;
+}
+
 .info{
 	width:100%;
 	text-align: center;
@@ -19,4 +20,5 @@
 }
 .row>td>h4{
 	color: #d735bcd3;
+	font-size: 1.3rem;
 }

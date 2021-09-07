@@ -20,7 +20,7 @@ const FormData = ({
 						<h2 className="form-subTitle">Block Reward in
 						<select className="selector" name="coins" onChange={coinChange}>
 						{coins.map(coin => <option key={coin.value} value={coin.value}>{coin.name}</option>)}
-						</select> is {coins[coinsChange].value} (10 min for now) </h2>
+						</select> is {coins[coinsChange].value} (10 min) </h2>
 				<div className="form-group">
 						<label className="label">Power Network in {coins[coinsChange].name}: </label>
 						<div>

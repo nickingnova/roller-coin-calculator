@@ -14,9 +14,9 @@ const TableRewards = ({
 			<table className="table-container">
 				<thead className="col-container">
 				<tr className="col">
-						<td><h2>Rewards</h2></td>
-						<td><h2>Value*</h2></td>
-						<td><h2>Price in {coinsAdd[coinsChange].name}</h2></td>
+						<td><h2 className="table-tittles">Rewards</h2></td>
+						<td><h2 className="table-tittles">Value*</h2></td>
+						<td><h2 className="table-tittles">Price in {coinsAdd[coinsChange].name}</h2></td>
 				</tr>
 				</thead>
 				<tbody>

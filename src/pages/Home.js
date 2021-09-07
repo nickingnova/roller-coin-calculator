@@ -107,7 +107,7 @@ function Home () {
 		return (
 			<React.Fragment>
 			<div className="global-container">
-				<div className="mid">
+				<div className="mid-form">
 						<FormData
 							coins={coins}
 							coinsChange={coinsChange}
@@ -121,7 +121,7 @@ function Home () {
 							setYourPower={setYourPower}
 						/>
 				</div>
-				<div className="mid">
+				<div className="mid-table">
 				<TableRewards
 							perBLock={perBLock}
 							perHour={perHour}
@@ -134,7 +134,11 @@ function Home () {
 				</div>
 				</div>
 				<hr/>
-					{visibleWidget === true &&	<WidgetCoins key={coinsAdd.name} coins={coinsAdd}/>}
+					{visibleWidget === true &&
+					<div className="mid-widget">
+						<WidgetCoins key={coinsAdd.name} coins={coinsAdd}/>
+					</div>
+					}
 			</React.Fragment>
 		);
 }

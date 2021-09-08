@@ -1,13 +1,13 @@
 import React from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import {Header} from './components/Header';
+import {Footer} from './components/Footer';
 
 
 
 export default function Layout(props) {
 	return (
 		<React.Fragment>
-			<Header />
+			<Header coins={props.coins}/>
 			{props.children}
       <Footer/>
 		</React.Fragment>

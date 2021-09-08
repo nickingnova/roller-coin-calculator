@@ -2,15 +2,15 @@ import React  from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Layout from './Layout';
-import Home  from './pages/Home';
+import {Home, coins}  from './pages/Home';
 
 
 function App(){
 	return(
 		<BrowserRouter>
-			<Layout>
+			<Layout coins={coins}>
 			<Switch>
-				<Route path="/roller-coin-calculator" component={Home} />
+				<Route path="/roller-coin-calculator/" component={Home} />
 			</Switch>
 			</Layout>
 		</BrowserRouter>

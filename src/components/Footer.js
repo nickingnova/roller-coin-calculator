@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './styles/Footer.css'
 import promotion from '../images/w460h60.gif';
 import logoNick from '../images/logotipo.png';
 
-class Footer extends Component {
-	render() {
+function Footer (){
 		return (
 			<React.Fragment>
 				<footer className="footer-container">
@@ -20,7 +19,6 @@ class Footer extends Component {
 				</footer>
 			</React.Fragment>
 		);
-	}
 }
 
-export default Footer;
+export {Footer};

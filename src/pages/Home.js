@@ -10,10 +10,10 @@ import rltImg from '../images/rlt.svg'
 const URLCOINS = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=20&page=1";
 
 const coins = [
-	{ value: '30000', name: 'BTC', 	price: 0, img:"" , change24: 0},
-	{	value: '0.005',	name: 'ETH', 	price: 0, img:"", change24: 0},
-	{	value: '20',		name: 'DOGE', price: 0, img:"", change24: 0},
-	{	value: '30',		name: 'RTL', 	price: 1, img:rltImg, change24: 0},
+	{ value: '30000', name: 'BTC', 	price: 0, img:"" , change24: 0, address: "14kjB9EJamPEZrTNU8AfYzBaNJAdDuQZnq"},
+	{	value: '0.005',	name: 'ETH', 	price: 0, img:"", change24: 0, address: "0xfc932c099e7367f3fde62b62e05d1590e725a1c8"},
+	{	value: '20',		name: 'DOGE', price: 0, img:"", change24: 0, address: "D9X9aRC2azGsLLp2it9Ct9hhxzvBqq8dvB"},
+	{	value: '30',		name: 'RTL', 	price: 1, img:rltImg, change24: 0, address: ""},
 ]
 
 const hashes = [
@@ -44,7 +44,6 @@ function Home () {
 			try {
 				const request = await axios.get(URLCOINS)
 				const coinsApi = await request.data
-				console.log(request.data)
 				await coinsValues(coinsApi)
 			} catch (error) {
 				console.error(error);
@@ -143,4 +142,4 @@ function Home () {
 		);
 }
 
-export default Home;
+export {Home, coins};

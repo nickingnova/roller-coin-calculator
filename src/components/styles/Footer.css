@@ -44,11 +44,14 @@
 .icons-container:hover{
 	text-decoration-line:underline;
 }
+.icons-container:active{
+	color: rgba(255, 255, 255, 0.438);
+}
 
 .promo-container{
 	grid-area: promo;
 	display: inline-block;
-	width: auto;
+	min-width: 100px;
 }
 
 .promo-container>img{

@@ -15,8 +15,8 @@ function WidgetCoins(props) {
 						{coin.name}
 						</h2>
 						<p><strong>Price: </strong>${coin.price}</p>
-						<p><strong>Change last 24hr</strong></p>
-						<p className={(coin.change24 >= 0) ? "green" : "red"}> {(coin.change24).toFixed(3)}%</p>
+						<p><strong>Change last 24hr:</strong></p>
+						<p className={(coin.change24 >= 0) ? "green" : "red"}> {(coin.change24).toFixed(2)}%</p>
 					</div>
 				))}
 			</div>

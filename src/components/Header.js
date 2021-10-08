@@ -9,17 +9,17 @@ function Header ({coins}) {
 
 	const [addressVisible, setAddressVisible] = useState(false);
 	const [indexCoin, setIndexCoin] = useState(0);
-	const [value, setValue] = useState(`${coins[0].address}`);
+	// const [value, setValue] = useState(`${coins[0].address}`);
   const [copied, setCopied] = useState(false);
-  
+
 
 	const changeIndex = () => {
-		if (indexCoin === 2) {
+		if (indexCoin === 3) {
 			setIndexCoin(0)
 		} else {
 			setIndexCoin(indexCoin+1)
 		}
-		setValue(coins[indexCoin].address)
+		// setValue(coins[indexCoin].address)
 		setCopied(false)
 	}
 	useEffect(() =>{
@@ -36,31 +36,31 @@ function Header ({coins}) {
 					<h1 className="header-tittle">Hello Roller</h1>
 				</div>
 				<div className="header-wallet">
-					<h3 role="button" onClick={() => setAddressVisible(!addressVisible) && setCopied(false)} className="wallet-tittle">
+					<h3 role="button" onClick={() => setAddressVisible(!addressVisible) && setCopied(false) && setIndexCoin(0)} className="wallet-tittle">
 					Support Me
 					</h3>
-					{addressVisible && 
+					{addressVisible &&
 					<div className="wallet-address">
 					  <div className="address-tittle">
 								<h3>{coins[indexCoin].name}</h3>
-								<img className="image-coin" src={coins[indexCoin].img} alt={`${coins[indexCoin].name}-icon`}></img>
+								<img className="image-coin" src={coins[indexCoin].img} alt={`icon`}></img>
 						</div>
 								<div className="qr-wallet">
-									<QRCode className="qr-wallet" value={value} renderAs="canvas" size={256} level="H"/>
+									<QRCode className="qr-wallet" value={coins[indexCoin].address} renderAs="canvas" size={256} level="H"/>
 								</div>
 								<button type="button" className="change-coin" onClick={changeIndex}>></button> 
 						{copied && <span className="copied">Copied!</span>	}
 						<div className="address-link">
 						<br />
 							<CopyToClipboard
-										text={value}
+										text={coins[indexCoin].address}
 										onCopy={() => setCopied(true)}
 										className="link"
 									>
 							<p className="link">
 								Click to copy address:
 								<br />
-								{value}
+								{coins[indexCoin].address}
 							</p>
       			</CopyToClipboard>
 						</div>

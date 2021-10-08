@@ -122,10 +122,10 @@
 	width: 25px;
 	font-size: 1.3rem;
 	text-align: center;
-	background-color:#03e1e4;
 	border-radius: 5px;
-	box-shadow: 0 3px #186c6d, 0 7px #1f1f2c;
-	border: 1px solid #9ff2f3;
+	box-shadow: 0 6px #514e72, 0 10px #1f1f2c;
+	background-color: #8984b1;
+	border: 1px solid #c3b0d0;
 	color: #2f3045;
 	transition: box-shadow .1s ease-in-out;
 }

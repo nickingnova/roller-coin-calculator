@@ -13,6 +13,7 @@ const coins = [
 	{ value: '30000', name: 'BTC', 	price: 0, img:"" , change24: 0, address: "14kjB9EJamPEZrTNU8AfYzBaNJAdDuQZnq"},
 	{	value: '0.005',	name: 'ETH', 	price: 0, img:"", change24: 0, address: "0xfc932c099e7367f3fde62b62e05d1590e725a1c8"},
 	{	value: '20',		name: 'DOGE', price: 0, img:"", change24: 0, address: "D9X9aRC2azGsLLp2it9Ct9hhxzvBqq8dvB"},
+	{	value: '0.012',	name: 'BNB',	price: 0,	img:"", change24: 0,	address: "0xAbAd1451af0F94f0e96d634DC68B008f8EBC4ADc"},
 	{	value: '30',		name: 'RTL', 	price: 1, img:rltImg, change24: 0, address: ""},
 ]
 
@@ -29,7 +30,7 @@ function Home () {
 
 	const coinsValues = (coinsApi) => {
 		const newCoins = [...coins]
-		for(let i = 0; i<3; i++){
+		for(let i = 0; i<4; i++){
 			let value = coinsApi.find(coin => coin.symbol === coins[i].name.toLowerCase())
 			newCoins[i].price = value.current_price
 			newCoins[i].img = value.image
@@ -57,6 +58,7 @@ function Home () {
 	const [ perBLock, setPerBLock ] = React.useState(0.0000);
 	const [ powerNet, setPowerNet ] = React.useState('');
 	const [ yourPower, setYourPower ] = React.useState('');
+	const [	rewardBlock, setRewardBlock ] = React.useState('');
 	const [ perHour, setPerHour ] = React.useState(0.0000);
 	const [ perDay, setPerDay ] = React.useState(0.0000);
 	const [ perWeek, setPerWeek] = React.useState(0.0000);
@@ -78,7 +80,7 @@ function Home () {
 		console.log(powerNetResult)
 		const yourPowerResult = yourPower * parseInt(hashes[hashesChange].value);
 		console.log(yourPowerResult)
-		const result = ((parseFloat(coins[coinsChange].value)) * (yourPowerResult / powerNetResult))
+		const result = ((parseFloat(rewardBlock)) * (yourPowerResult / powerNetResult))
 		console.log(result)
 		if(isNaN(result)){
 			setPerBLock(0.0000)
@@ -86,7 +88,7 @@ function Home () {
 			setPerDay(0.0000);
 			setPerWeek(0.0000);
 			setPerMonth(0.0000);
-		} else { 
+		} else {
 			if(coinsAdd[coinsChange].name === "BTC"){
 				setPerBLock(result.toFixed(8))
 				setPerHour((result * 6).toFixed(7));
@@ -112,6 +114,8 @@ function Home () {
 							coinsChange={coinsChange}
 							coinChange={coinChange}
 							onSubmit={onSubmit}
+							setRewardBlock={setRewardBlock}
+							rewardBlock={rewardBlock}
 							powerNet={powerNet}
 							setPowerNet={setPowerNet}
 							yourPower={yourPower}

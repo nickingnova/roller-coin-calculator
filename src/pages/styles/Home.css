@@ -1,8 +1,8 @@
 .global-container{
 	background:#181928;
 	margin: 0;
-	color: white;
-	height: auto;
+	color: #ffffff;
+	height: 90vh;
 	display: grid;
 	justify-content: center;
   align-items: center;
@@ -29,5 +29,6 @@ h1{
   .global-container {
     grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr;
+		height: 45vh;
   }
 }

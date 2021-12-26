@@ -14,7 +14,8 @@ const coins = [
 	{	value: '0.005',	name: 'ETH', 	price: 0, img:"", change24: 0, address: "0xfc932c099e7367f3fde62b62e05d1590e725a1c8"},
 	{	value: '20',		name: 'DOGE', price: 0, img:"", change24: 0, address: "D9X9aRC2azGsLLp2it9Ct9hhxzvBqq8dvB"},
 	{	value: '0.012',	name: 'BNB',	price: 0,	img:"", change24: 0,	address: "0xAbAd1451af0F94f0e96d634DC68B008f8EBC4ADc"},
-	{	value: '30',		name: 'RTL', 	price: 1, img:rltImg, change24: 0, address: ""},
+	{	value: '3',		name: 'MATIC', 	price: 0, img:"", change24: 0, address: ""},
+	{	value: '30',		name: 'RTL', 	price: 1, img:rltImg, change24: 0, address: ""}
 ]
 
 const hashes = [
@@ -30,7 +31,7 @@ function Home () {
 
 	const coinsValues = (coinsApi) => {
 		const newCoins = [...coins]
-		for(let i = 0; i<4; i++){
+		for(let i = 0; i<5; i++){
 			let value = coinsApi.find(coin => coin.symbol === coins[i].name.toLowerCase())
 			newCoins[i].price = value.current_price
 			newCoins[i].img = value.image
@@ -45,6 +46,7 @@ function Home () {
 			try {
 				const request = await axios.get(URLCOINS)
 				const coinsApi = await request.data
+				console.log(coinsApi)
 				await coinsValues(coinsApi)
 			} catch (error) {
 				console.error(error);

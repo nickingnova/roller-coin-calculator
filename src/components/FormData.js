@@ -33,7 +33,7 @@ const FormData = ({
 								name="powerNet"
 								placeholder={coins[coinsChange].value}
 								required={true}
-							/> ( 10 min now ) </h2>
+							/> ( 10min aprox ) </h2>
 				</div>
 				<div className="form-group">
 						<label className="label">Power Network in {coins[coinsChange].name}: </label>

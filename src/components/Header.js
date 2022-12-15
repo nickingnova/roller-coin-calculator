@@ -14,7 +14,7 @@ function Header ({coins}) {
 
 
 	const changeIndex = () => {
-		if (indexCoin === 3) {
+		if (indexCoin === 4) {
 			setIndexCoin(0)
 		} else {
 			setIndexCoin(indexCoin+1)

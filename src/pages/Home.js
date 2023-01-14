@@ -14,7 +14,7 @@ const coins = [
 	{	value: '0.005',	name: 'ETH', 	price: 0, img:"", change24: 0, address: "0xfc932c099e7367f3fde62b62e05d1590e725a1c8"},
 	{	value: '20',		name: 'DOGE', price: 0, img:"", change24: 0, address: "D9X9aRC2azGsLLp2it9Ct9hhxzvBqq8dvB"},
 	{	value: '0.012',	name: 'BNB',	price: 0,	img:"", change24: 0,	address: "0xAbAd1451af0F94f0e96d634DC68B008f8EBC4ADc"},
-	{	value: '3',		name: 'MATIC', 	price: 0, img:"", change24: 0, address: "0x834f641562336ea86d512e503ce8b71d46ee4388"},
+	{	value: '4',		name: 'MATIC', 	price: 0, img:"", change24: 0, address: "0x834f641562336ea86d512e503ce8b71d46ee4388"},
 	{	value: '30',		name: 'RTL', 	price: 1, img:rltImg, change24: 0, address: ""}
 ]
 

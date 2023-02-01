@@ -1,20 +1,23 @@
 import React, {useEffect} from 'react';
-import axios from 'axios'
+import axios from 'axios';
 import WidgetCoins from '../components/WidgetCoins';
-import {TableRewards} from '../components/TableRewards'
-import {FormData} from '../components/FormData'
+import {TableRewards} from '../components/TableRewards';
+import {FormData} from '../components/FormData';
 import './styles/Home.css';
-import rltImg from '../images/rlt.svg'
+import rltImg from '../images/rlt.svg';
 
 
 const URLCOINS = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=20&page=1";
 
 const coins = [
-	{ value: '30000', name: 'BTC', 	price: 0, img:"" , change24: 0, address: "14kjB9EJamPEZrTNU8AfYzBaNJAdDuQZnq"},
-	{	value: '0.005',	name: 'ETH', 	price: 0, img:"", change24: 0, address: "0xfc932c099e7367f3fde62b62e05d1590e725a1c8"},
+	{ value: '28000', name: 'BTC', 	price: 0, img:"" , change24: 0, address: "14kjB9EJamPEZrTNU8AfYzBaNJAdDuQZnq"},
+	{	value: '0.006',	name: 'ETH', 	price: 0, img:"", change24: 0, address: "0xfc932c099e7367f3fde62b62e05d1590e725a1c8"},
 	{	value: '20',		name: 'DOGE', price: 0, img:"", change24: 0, address: "D9X9aRC2azGsLLp2it9Ct9hhxzvBqq8dvB"},
-	{	value: '0.012',	name: 'BNB',	price: 0,	img:"", change24: 0,	address: "0xAbAd1451af0F94f0e96d634DC68B008f8EBC4ADc"},
-	{	value: '4',		name: 'MATIC', 	price: 0, img:"", change24: 0, address: "0x834f641562336ea86d512e503ce8b71d46ee4388"},
+	{	value: '0.032',	name: 'BNB',	price: 0,	img:"", change24: 0,	address: "0xAbAd1451af0F94f0e96d634DC68B008f8EBC4ADc"},
+	{	value: '4,5',		name: 'MATIC', 	price: 0, img:"", change24: 0, address: "0x834f641562336ea86d512e503ce8b71d46ee4388"},
+	{ value: '0.015', name: 'LTC', price: 0, img:"", change24:0, address: ""},
+	{ value: '0.15', name: 'SOL', price: 0, img:"", change24:0, address: "CLLsD4iSYs9qo78vTyFK85NCS9rtRv3esPpzDKH4CdZ"},
+	{ value: '60', name: 'TRX', price: 0, img:"", change24:0, address: ""},
 	{	value: '30',		name: 'RTL', 	price: 1, img:rltImg, change24: 0, address: ""}
 ]
 
@@ -31,7 +34,7 @@ function Home () {
 
 	const coinsValues = (coinsApi) => {
 		const newCoins = [...coins]
-		for(let i = 0; i<5; i++){
+		for(let i = 0; i<8; i++){
 			let value = coinsApi.find(coin => coin.symbol === coins[i].name.toLowerCase())
 			newCoins[i].price = value.current_price
 			newCoins[i].img = value.image
@@ -109,41 +112,43 @@ function Home () {
 
 		return (
 			<React.Fragment>
-			<div className="global-container">
-				<div className="mid-form">
-						<FormData
-							coins={coins}
-							coinsChange={coinsChange}
-							coinChange={coinChange}
-							onSubmit={onSubmit}
-							setRewardBlock={setRewardBlock}
-							rewardBlock={rewardBlock}
-							powerNet={powerNet}
-							setPowerNet={setPowerNet}
-							yourPower={yourPower}
-							hashChange={hashChange}
-							hashes={hashes}
-							setYourPower={setYourPower}
-						/>
-				</div>
-				<div className="mid-table">
-				<TableRewards
-							perBLock={perBLock}
-							perHour={perHour}
-							perDay={perDay}
-							perWeek={perWeek}
-							perMonth={perMonth}
-							coinsAdd={coinsAdd}
-							coinsChange={coinsChange}
-						/>
-				</div>
+			<div className="main">
+				<div className="global-container">
+					<div className="mid-form">
+							<FormData
+								coins={coins}
+								coinsChange={coinsChange}
+								coinChange={coinChange}
+								onSubmit={onSubmit}
+								setRewardBlock={setRewardBlock}
+								rewardBlock={rewardBlock}
+								powerNet={powerNet}
+								setPowerNet={setPowerNet}
+								yourPower={yourPower}
+								hashChange={hashChange}
+								hashes={hashes}
+								setYourPower={setYourPower}
+							/>
+					</div>
+					<div className="mid-table">
+					<TableRewards
+								perBLock={perBLock}
+								perHour={perHour}
+								perDay={perDay}
+								perWeek={perWeek}
+								perMonth={perMonth}
+								coinsAdd={coinsAdd}
+								coinsChange={coinsChange}
+							/>
+					</div>
 				</div>
 				<hr/>
 					{visibleWidget === true &&
-					<div className="mid-widget">
+					<div className="mid-widge t">
 						<WidgetCoins key={coinsAdd.name} coins={coinsAdd}/>
 					</div>
 					}
+				</div>
 			</React.Fragment>
 		);
 }

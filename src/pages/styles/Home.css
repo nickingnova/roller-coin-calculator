@@ -1,8 +1,10 @@
+.main{
+	min-height: 60vh;
+}
 .global-container{
 	background:#181928;
 	margin: 0;
 	color: #ffffff;
-	min-height: 60vh;
 	display: grid;
 	justify-content: center;
   align-items: center;

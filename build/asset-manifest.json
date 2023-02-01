@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/roller-coin-calculator/static/css/main.20fa651e.css",
-    "main.js": "/roller-coin-calculator/static/js/main.5e2f5276.js",
+    "main.css": "/roller-coin-calculator/static/css/main.006659e2.css",
+    "main.js": "/roller-coin-calculator/static/js/main.df524f46.js",
     "static/js/787.b96ecaae.chunk.js": "/roller-coin-calculator/static/js/787.b96ecaae.chunk.js",
     "static/media/w460h60.gif": "/roller-coin-calculator/static/media/w460h60.014ef3be2f58d476da1c.gif",
     "static/media/rlt.svg": "/roller-coin-calculator/static/media/rlt.237e8acea42646c3432d19747ed3b288.svg",
     "index.html": "/roller-coin-calculator/index.html",
-    "main.20fa651e.css.map": "/roller-coin-calculator/static/css/main.20fa651e.css.map",
-    "main.5e2f5276.js.map": "/roller-coin-calculator/static/js/main.5e2f5276.js.map",
+    "main.006659e2.css.map": "/roller-coin-calculator/static/css/main.006659e2.css.map",
+    "main.df524f46.js.map": "/roller-coin-calculator/static/js/main.df524f46.js.map",
     "787.b96ecaae.chunk.js.map": "/roller-coin-calculator/static/js/787.b96ecaae.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.20fa651e.css",
-    "static/js/main.5e2f5276.js"
+    "static/css/main.006659e2.css",
+    "static/js/main.df524f46.js"
   ]
 }
